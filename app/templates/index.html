@@ -2,9 +2,10 @@
 
 {% block title %}Honeybee Early Learning — Home{% endblock %}
 {% block meta_description %}Honeybee Early Learning is a home-based preschool program in Cheyenne, Wyoming, offering a safe, nurturing environment for children ages 3-5.{% endblock %}
+{% block body_class %}nav-overlay nav-light page-home{% endblock %}
 
 {% block content %}
-<section class="hero" style="background-image: url('{{ url_for('static', filename='img/hero-bg.png') }}');">
+<section class="hero full-bleed" style="background-image: url('{{ url_for('static', filename='img/hero-bg.png') }}');">
   <div class="hero-content">
     <h1>At Honeybee Early Learning, our mission is to provide a safe, nurturing, and developmentally appropriate HOME-AWAY-FROM-HOME where every child is uniquely valued. We strive to foster a lifelong love for learning, physical wellness, and social-emotional confidence in every student.</h1>
   </div>
@@ -14,7 +15,7 @@
   <h2>Bee Curious. Bee Kind. Bee You</h2>
 </section>
 
-<section class="under-construction" style="background-image: url('{{ url_for('static', filename='img/under-construction-bg.png') }}');">
+<section class="under-construction full-bleed" style="background-image: url('{{ url_for('static', filename='img/under-construction-bg.png') }}');">
   <div class="under-construction-content">
     <h3>We are currently under construction. Enrollments start March 2027</h3>
     <p>We are currently working on redoing our space and beginning Wyoming licensing requirements. Our goal is to be up and running with classes beginning August 2027. Keep your eyes open for enrollments starting in March 2027.</p>

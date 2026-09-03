@@ -2,10 +2,11 @@
 
 {% block title %}Contact — Honeybee Early Learning{% endblock %}
 {% block meta_description %}Get in touch with Honeybee Early Learning to ask questions, schedule a tour, or register your child.{% endblock %}
+{% block body_class %}page-contact{% endblock %}
 
 {% block content %}
-<section class="contact" style="background-image: url('{{ url_for('static', filename='img/contact-bg.png') }}');">
-  <div class="contact-content">
+<section class="contact">
+  <div class="contact-copy">
     <h1>Hit Us With Your Curiosity</h1>
     <p>Interested in registering? Have more questions? Would you like a tour of our school? Whatever it is, please let us know! Fill out the form below to send us a quick message! We can't wait to welcome your family!</p>
 
@@ -26,6 +27,9 @@
 
       <button type="submit" class="btn">Send Message</button>
     </form>
+  </div>
+  <div class="contact-photo">
+    <img src="{{ url_for('static', filename='img/contact-bg.png') }}" alt="">
   </div>
 </section>
 {% endblock %}
