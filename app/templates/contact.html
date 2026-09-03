@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Contact — Honeybee Early Learning{% endblock %}
+{% block meta_description %}Get in touch with Honeybee Early Learning to ask questions, schedule a tour, or register your child.{% endblock %}
+
+{% block content %}
+<section class="contact" style="background-image: url('{{ url_for('static', filename='img/contact-bg.png') }}');">
+  <div class="contact-content">
+    <h1>Hit Us With Your Curiosity</h1>
+    <p>Interested in registering? Have more questions? Would you like a tour of our school? Whatever it is, please let us know! Fill out the form below to send us a quick message! We can't wait to welcome your family!</p>
+
+    <form method="POST" action="{{ url_for('contact') }}" class="contact-form">
+      <div class="honeypot-field" aria-hidden="true">
+        <label for="website">Leave this field blank</label>
+        <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+      </div>
+
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" value="{{ name or '' }}" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" value="{{ email or '' }}" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="6" required>{{ message or '' }}</textarea>
+
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </div>
+</section>
+{% endblock %}

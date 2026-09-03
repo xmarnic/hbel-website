@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}Services — Honeybee Early Learning{% endblock %}
+{% block meta_description %}Flexible part-time preschool schedules for children ages 3-5 at Honeybee Early Learning in Cheyenne, Wyoming.{% endblock %}
+
+{% block content %}
+<section class="services-intro">
+  <p>We offer a home-based preschool program for children ages 3-5 in a mixed-age setting. With a small group size of 6 students to one teacher, your student gets personalized care. We offer four flexible part-time schedules to fit your family's routine/needs.</p>
+  <p>Honeybee Early Learning uses The Peaceful Press literature and play-based curriculum. We believe children learn best through purposeful, play-based learning. Our program blends joyful, hands-on, theme-based activities with intentional discovery and structured explorations to nurture the whole child.</p>
+</section>
+
+<section class="services-grid">
+  {% for service in services %}
+  <div class="service-card">
+    <h2>{{ service.name }}</h2>
+    <p class="service-price">{{ service.price_cents | money }}</p>
+    <p class="service-schedule">{{ service.schedule }}</p>
+    <p class="service-capacity">{{ service.capacity }} spots per class</p>
+    {% if service.bookable and service.booking_url %}
+      <a href="{{ service.booking_url }}" class="btn">Book Now</a>
+    {% else %}
+      <a href="{{ url_for('contact') }}" class="btn">Contact Us to Enroll</a>
+    {% endif %}
+  </div>
+  {% endfor %}
+</section>
+
+<section class="enrollment-requirements">
+  <h2>To officially reserve and lock in your child's classroom slot:</h2>
+  <ul>
+    <li>Completed Registration Form</li>
+    <li>Up-to-date immunization records</li>
+    <li>Enrollment Fee: A $25 non-refundable fee is due immediately upon submitting your enrollment application. (This will be used towards classroom preparation and administration processing.)</li>
+    <li>Security Deposit: A refundable tuition deposit equal to one month's tuition must be on file before your child's first day of class. This deposit is held to secure your spot and will be applied to your final month of care, provided proper withdrawal notice is given.</li>
+  </ul>
+  <p class="policy-note">Full payment or agreed installments must be made as agreed at enrollment. Deposits are non-refundable, and all payments must be made within 90 days of the initial deposit. Cancellations must be made via email or over the phone.</p>
+</section>
+
+<section class="services-cta">
+  <h2>Ready to Grow Together?</h2>
+  <a href="{{ url_for('contact') }}" class="btn">Get in Touch</a>
+</section>
+{% endblock %}

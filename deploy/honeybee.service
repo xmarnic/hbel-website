@@ -1,0 +1,24 @@
+# Example systemd unit — NOT applied automatically. Adapt paths/user and
+# install with: sudo cp deploy/honeybee.service /etc/systemd/system/
+# then: sudo systemctl daemon-reload && sudo systemctl enable --now honeybee
+#
+# EnvironmentFile below is a separate, NON-git-tracked file living on the
+# server (parallel in spirit to .env, but consumed by systemd). systemd's
+# EnvironmentFile format is plain KEY=VALUE per line and does NOT support
+# quoted values the way python-dotenv does — don't wrap values in quotes.
+
+[Unit]
+Description=Honeybee Early Learning Flask app (gunicorn)
+After=network.target
+
+[Service]
+Type=simple
+User=honeybee
+Group=honeybee
+WorkingDirectory=/srv/honeybee-early-learning
+EnvironmentFile=/srv/honeybee-early-learning/honeybee.env
+ExecStart=/srv/honeybee-early-learning/venv/bin/gunicorn -w 2 -b 127.0.0.1:8000 wsgi:app
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
