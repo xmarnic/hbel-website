@@ -1,4 +1,4 @@
-from flask import current_app, flash, redirect, render_template, request, url_for
+from flask import current_app, flash, redirect, render_template, request, send_from_directory, url_for
 
 from .mail import send_contact_email
 
@@ -72,6 +72,18 @@ def register_routes(app):
 
         flash("Thanks for reaching out! We'll be in touch soon.", "success")
         return redirect(url_for("contact"))
+
+    @app.route("/robots.txt")
+    def robots_txt():
+        return send_from_directory(
+            current_app.static_folder, "robots.txt", mimetype="text/plain"
+        )
+
+    @app.route("/sitemap.xml")
+    def sitemap_xml():
+        return send_from_directory(
+            current_app.static_folder, "sitemap.xml", mimetype="application/xml"
+        )
 
     @app.route("/services-store/")
     @app.route("/services-store/<path:subpath>")

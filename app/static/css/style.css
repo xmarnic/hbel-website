@@ -178,7 +178,7 @@ body.page-services main {
 /* Hero / background sections */
 
 .hero,
-.under-construction {
+.enrollment-banner {
   background-size: cover;
   background-position: center;
   border-radius: 0;
@@ -212,16 +212,22 @@ body.page-services main {
 }
 
 .hero h1 {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   color: #fff;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
 }
 
-.under-construction {
+.hero-subtitle {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+}
+
+.enrollment-banner {
   min-height: 60vh;
 }
 
-.under-construction-content {
+.enrollment-banner-content {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -237,11 +243,11 @@ body.page-services main {
 }
 
 @media (max-width: 720px) {
-  .under-construction {
+  .enrollment-banner {
     min-height: 0;
   }
 
-  .under-construction-content {
+  .enrollment-banner-content {
     position: static;
     width: 100%;
     left: auto;
@@ -315,6 +321,10 @@ body.page-about main {
   max-width: 700px;
   margin: 0 auto;
   text-align: center;
+}
+
+.services-intro-inner h1 {
+  color: #fff;
 }
 
 .services-intro-inner p {

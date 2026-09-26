@@ -3,8 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% block title %}Honeybee Early Learning{% endblock %}</title>
-  <meta name="description" content="{% block meta_description %}Honeybee Early Learning is a home-based preschool program in Cheyenne, Wyoming for children ages 3-5.{% endblock %}">
+  <title>{% block title %}Honeybee Early Learning | Home-Based Preschool in Cheyenne, WY{% endblock %}</title>
+  <meta name="description" content="{% block meta_description %}Honeybee Early Learning is a home-based preschool in Cheyenne, Wyoming, offering part-time, play-based classes for children ages 3-5. Now enrolling for classes beginning Spring 2027.{% endblock %}">
+  <link rel="canonical" href="{% block canonical %}https://honeybeelearning.kids{{ request.path }}{% endblock %}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Honeybee Early Learning">
+  <meta property="og:title" content="{% block og_title %}{{ self.title() }}{% endblock %}">
+  <meta property="og:description" content="{% block og_description %}{{ self.meta_description() }}{% endblock %}">
+  <meta property="og:url" content="{{ self.canonical() }}">
+  <meta property="og:image" content="https://honeybeelearning.kids{{ url_for('static', filename='img/hero-bg.png') }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {% block jsonld %}
+  {
+    "@context": "https://schema.org",
+    "@type": "Preschool",
+    "name": "Honeybee Early Learning LLC",
+    "url": "https://honeybeelearning.kids/",
+    "email": "melissa@honeybeelearning.kids",
+    "description": "Home-based preschool in Cheyenne, Wyoming, offering part-time, play-based classes for children ages 3-5 with a 6:1 student-teacher ratio. Classes begin Spring 2027.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Cheyenne",
+      "addressRegion": "WY",
+      "addressCountry": "US"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Cheyenne, Wyoming" },
+      { "@type": "AdministrativeArea", "name": "Laramie County, Wyoming" }
+    ]
+  }
+  {% endblock %}
+  </script>
   <link rel="icon" href="{{ url_for('static', filename='favicon.png') }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
