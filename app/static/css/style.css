@@ -420,6 +420,16 @@ body.page-contact main {
   background: #fff;
 }
 
+.contact-form input.field-invalid,
+.contact-form textarea.field-invalid {
+  border-color: #93362c;
+}
+
+.contact-form button[disabled] {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
 .honeypot-field {
   position: absolute;
   left: -9999px;

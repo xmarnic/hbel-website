@@ -11,4 +11,4 @@ class Config:
     SMTP_PORT = int(os.environ.get("SMTP_PORT", "587"))
     SMTP_USERNAME = os.environ["SMTP_USERNAME"]
     SMTP_APP_PASSWORD = os.environ["SMTP_APP_PASSWORD"]
-    CONTACT_RECIPIENT = os.environ.get("CONTACT_RECIPIENT", SMTP_USERNAME)
+    CONTACT_RECIPIENT = os.environ.get("CONTACT_RECIPIENT") or SMTP_USERNAME
