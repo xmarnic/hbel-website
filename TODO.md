@@ -2,7 +2,7 @@
 
 Goal: make Honeybee Early Learning the obvious choice when a Cheyenne /
 Laramie County parent searches for preschool, and build local awareness ahead
-of the Spring 2027 opening.
+of the Fall 2027 opening.
 
 **Use this exact NAP (name, address, phone) on every listing and account:**
 
@@ -22,7 +22,7 @@ These need the business owner's identity, accounts, or community presence.
 ### Highest impact
 
 - [ ] **Google Business Profile** — category "Preschool", use the
-      "opening soon" feature with a Spring 2027 date, add photos of the
+      "opening soon" feature with a Fall 2027 date, add photos of the
       space, hours, and a description featuring "home-based preschool in
       Cheyenne". This is what puts you in the map pack for
       "preschool near me" searches. Note the exact map pin location —
@@ -97,7 +97,8 @@ Website, DNS, and search-console work.
 
 ## Timing notes
 
-- Classes begin **Spring 2027**; enrollment is open now via the contact form
+- Classes begin **Fall 2027**; the classroom is under construction and the
+  site collects interest-list signups via the contact form
 - Google Business Profile can be created before opening (future opening
   date feature)
 - Aim to have Search Console + Business Profile done within a month so the

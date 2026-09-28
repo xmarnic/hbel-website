@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block title %}Part-Time Preschool Classes & Tuition | Honeybee Early Learning — Cheyenne, WY{% endblock %}
-{% block meta_description %}Part-time preschool schedules and tuition for ages 3-5 at Honeybee Early Learning, a home-based preschool in Cheyenne, WY. Now enrolling for Spring 2027.{% endblock %}
+{% block meta_description %}Part-time preschool schedules and tuition for ages 3-5 at Honeybee Early Learning, a home-based preschool in Cheyenne, WY. Opening Fall 2027.{% endblock %}
 {% block body_class %}nav-light page-services{% endblock %}
 
 {% block content %}
@@ -10,7 +10,7 @@
     <h1>Part-Time Preschool Classes in Cheyenne, Wyoming</h1>
     <p>Honeybee Early Learning is a home-based preschool program for children ages 3-5 in a mixed-age setting, welcoming families from Cheyenne and throughout Laramie County. With a small group size of 6 students to one teacher, your child gets personalized care and attention. We offer four flexible part-time schedules to fit your family's routine and needs.</p>
     <p>Honeybee Early Learning uses The Peaceful Press literature and play-based curriculum. We believe children learn best through purposeful, play-based learning. Our program blends joyful, hands-on, theme-based activities with intentional discovery and structured explorations to nurture the whole child.</p>
-    <p>Enrollment is now open for our first classes, beginning Spring 2027.</p>
+    <p>We plan to open our doors for our first classes in Fall 2027. Join our interest list to be notified as soon as enrollment opens.</p>
   </div>
 </section>
 
@@ -24,14 +24,14 @@
     {% if service.bookable and service.booking_url %}
       <a href="{{ service.booking_url }}" class="btn">Book Now</a>
     {% else %}
-      <a href="{{ url_for('contact') }}" class="btn">Contact Us to Enroll</a>
+      <a href="{{ url_for('contact') }}" class="btn">Join the Interest List</a>
     {% endif %}
   </div>
   {% endfor %}
 </section>
 
 <section class="enrollment-requirements">
-  <h2>To officially reserve and lock in your child's classroom slot:</h2>
+  <h2>When enrollment opens, here's what reserving your child's classroom slot will look like:</h2>
   <ul>
     <li>Completed Registration Form</li>
     <li>Up-to-date immunization records</li>
@@ -42,7 +42,7 @@
 </section>
 
 <section class="services-cta">
-  <h2>Ready to Grow Together?</h2>
-  <a href="{{ url_for('contact') }}" class="btn">Get in Touch</a>
+  <h2>Want a Spot When We Open?</h2>
+  <a href="{{ url_for('contact') }}" class="btn">Join the Interest List</a>
 </section>
 {% endblock %}
